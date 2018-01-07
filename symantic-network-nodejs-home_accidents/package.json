@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "expert": "^0.3.2",
+    "underscore": "^1.8.3"
+  }
+}
