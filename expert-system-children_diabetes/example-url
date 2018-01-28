@@ -1,0 +1,14 @@
+http://localhost:3000/res/api?age=3
+                              &glycemie=2
+                              &shakiness=True
+                              &hunger=True
+                              &sweating=True
+                              &headach=True
+                              &diabetic_parents=False
+                              &pale=False
+                              &urination=False
+                              &thirst=False
+                              &blurred_vision=False
+                              &dry_mouth=False
+                              &smelling_breath=False
+                              &shortness_of_breath=False
