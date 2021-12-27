@@ -1,17 +1,15 @@
 # Knowledge representation examples
 
-This repository contains some programming exercises for **Ontologies and Knowledge representation** class in University. It contains until the moment two examples:
+This repository contains a programming project for **Ontologies and Knowledge representation** class in University.
 
-* [Expert System that diagnosis children diabetes](expert-system-for-children-diabetes-diagnosis).
-* Semantic network (home accidents as example) *unfinished yet*
 
 ## Expert System for children Diabetes Diagnosis
 
-Built with Python, using [PyKnow]() library. And there's a tiny Node/Express server for offering a Web api
+Built with Python, using [Experta](https://pypi.org/project/experta/) library. And there's a tiny Node/Express server for offering a Web api
 ### Usage
-* First install `pyknow` Python package, and `Express` and `python-shell` for Node.js, then lunch the server (`main.js`) in order to use the Web API.
+* First install `experta` Python package, and `Express` and `python-shell` for Node.js, then lunch the server (`main.js`) in order to use the Web API.
 All this could be done with this command:
-`pip install pyknow && npm install && node main.js`
+`pip install experta && npm install && node main.js`
 * Then open your browser, and past this URL for example.
 ```
 localhost:3000/res/api?age=3
@@ -74,3 +72,10 @@ engine.declare(Personne(age= 2,
                         shortness_of_breath = False,
                         ))
 ```
+This fork mainly adds a graphical user interface in order to make interactions easier for normal user instead of using advanced tools such as curl or postman
+Here is a demo
+
+
+https://user-images.githubusercontent.com/50111205/147429922-51364d66-48e4-4da0-b2a7-981a22957a0a.mp4
+
+
