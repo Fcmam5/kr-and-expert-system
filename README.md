@@ -72,7 +72,8 @@ engine.declare(Personne(age= 2,
                         shortness_of_breath = False,
                         ))
 ```
-This fork mainly adds a graphical user interface in order to make interactions easier for normal user instead of using advanced tools such as curl or postman
+This fork mainly adds a graphical user interface in order to make interactions easier for normal user instead of using advanced tools such as curl or postman.
+
 Here is a demo
 
 
