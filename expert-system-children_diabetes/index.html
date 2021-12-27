@@ -1,0 +1,141 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="./preprocess.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Expert-System for Diabetes</title>
+
+
+    <style>
+        body,
+        html {
+            height: 100%;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous">
+    </script>
+
+        <div class="card border-primary mb-3 d-flex align-items-center justify-content-center" style="height: 100%" style="max-width: 70rem;">
+            <div class="container">
+                <div class="card-header">Diabetes detection expert-system</div>
+                    <div class="card-body text-primary">
+                        <h5 class="card-title">Fill in the form, please</h5>
+                        <br/>
+                        <form onsubmit="fun()" action="/res/api" method="get">
+                            <div class="row">
+                                <div class="col">
+                                    <label for="age" class="form-label">Age:</label>
+                                    <input type="range" name="age" class="form-range" min="0" max="5" id="age" value=0 />
+                                </div>
+                                <div class="col">
+                                    <label for="glycemie" class="form-label">Glycemie</label>
+                                    <input type="number" name="glycemie" class="form-control" id="glycemie"
+                                        placeholder="Type glycemie" value=0>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" name="shakiness" id="shakiness" value="True">
+                                    <label class="form-check-label" for="shakiness"> Shakiness</label>
+                                </div>
+
+                                <div class="col form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" name="hunger" id="hunger" value="True">
+                                    <label class="form-check-label" for="hunger">Hunger</label>
+                                </div>
+
+                                <div class="col form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" name="sweating" id="sweating" value="True">
+                                    <label class="form-check-label" for="sweating">Sweating</label>
+                                </div>
+
+                                <div class="col form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" name="headach" id="headach" value="True">
+                                    <label class="form-check-label" for="headach">Headach</label>
+                                </div>
+
+                            </div>
+
+
+                            <div class="row">
+                                <div class="col form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" name="diabetic_parents" id="diabetic_parents"
+                                        value="True">
+                                    <label class="form-check-label" for="diabetic_parents">Diabetic Parents</label>
+                                </div>
+
+                                <div class="col form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" name="pale" id="pale" value="True">
+                                    <label class="form-check-label" for="pale">Pale</label>
+                                </div>
+
+                                <div class="col form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" name="urination" id="urination" value="True">
+                                    <label class="form-check-label" for="urination">Urination</label>
+                                </div>
+
+                                <div class="col form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" name="thirst" id="thirst" value="True">
+                                    <label class="form-check-label" for="thirst">Thirst</label>
+                                </div>
+
+                            </div>
+
+
+                            <div class="row">
+                                <div class="col form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" name="blurred_vision" id="blurred_vision"
+                                        value="True">
+                                    <label class="form-check-label" for="blurred_vision">Blurred Vision</label>
+                                </div>
+
+                                <div class="col form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" name="dry_mouth" id="dry_mouth" value="True">
+                                    <label class="form-check-label" for="dry_mouth">Dry Mouth</label>
+                                </div>
+
+                                <div class="col form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" name="smelling_breath" id="smelling_breath"
+                                        value="True">
+                                    <label class="form-check-label" for="smelling_breath">Smelling Breath</label>
+                                </div>
+
+                                <div class="col form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" name="shortness_of_breath"
+                                        id="shortness_of_breath" value="True">
+                                    <label class="form-check-label" for="shortness_of_breath">Shortness of Breath</label>
+                                </div>
+                            </div>
+
+
+                            <br/> <br/>
+                            <button type="submit" class="btn btn-outline-primary">Submit</button> <button type="reset"
+                                class="btn btn-outline-danger">reset</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+        </div>
+            
+
+
+</body>
+
+</html>

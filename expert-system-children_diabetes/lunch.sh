@@ -1,2 +1,2 @@
 #!/bin/bash
-pip install pyknow && npm install && node main.js
+pip install experta && npm install && node main.js

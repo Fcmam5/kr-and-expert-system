@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # # -*- coding: utf-8 -*-
 
-from pyknow import *
+from experta import *
 import sys
 
 """
@@ -38,6 +38,7 @@ class InreferenceEngine(KnowledgeEngine):
             print("Warning! High blood sugar")
         else:
             self.declare(Fact(hyperglycemic_risk=False))
+
 
     @Rule(Fact(concerned=True),
           Personne(glycemie=MATCH.glycemie))
@@ -96,11 +97,12 @@ class InreferenceEngine(KnowledgeEngine):
     def has_signs_high_sugar(self, **_):
         self.declare(Fact(has_signs_high_sugar=True))
 
-    @Rule(Fact(concerned=True),
-          Fact(has_diabetic_parents=True),
-          Fact(has_signs_high_sugar=True))
-    def protocole_risk_high(self):
-        print("Warning! Child could be diabetic")
+
+    # @Rule(Fact(concerned=True),
+    #       Fact(has_diabetic_parents=True),
+    #       Fact(has_signs_high_sugar=True))
+    # def protocole_risk_high(self):
+    #     print("Warning! Child could be diabetic")
 
     @Rule(Fact(concerned=True),
           Fact(hyperglycemic_risk=True),
@@ -131,6 +133,13 @@ engine.declare(Personne(age= int(sys.argv[1]),
                         shortness_of_breath = bool(sys.argv[14]),
                         ))
 
+# +++++++++++++++++++++++
+# +++++++++++++++++++++++
+#           Test
+# +++++++++++++++++++++++
+# +++++++++++++++++++++++
+
+
 # engine.declare(Personne(age=2,
 #                         glycemie=11,
 #                         shakiness= False,
@@ -146,4 +155,6 @@ engine.declare(Personne(age= int(sys.argv[1]),
 #                         smelling_breath = False,
 #                         shortness_of_breath = False,
 #                         ))
+
+
 engine.run()
